@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <ItemGroup>
+        <PackageReference Include="Ardalis.Specification.EntityFrameworkCore" />
+        <PackageReference Include="FluentResults" />
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+        <PackageReference Include="Mapster" />
+        <PackageReference Include="Mapster.Async" />
+        <PackageReference Include="Mapster.DependencyInjection" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" />
+        <PackageReference Update="Microsoft.SourceLink.GitHub" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\NKZSoft.Template.Common\NKZSoft.Template.Common.csproj" />
+      <ProjectReference Include="..\NKZSoft.Template.Domain\NKZSoft.Template.Domain.csproj" />
+      <ProjectReference Include="..\NKZSoft.Template.MessageBrokers.RabbitMq\NKZSoft.Template.MessageBrokers.RabbitMq.csproj" />
+    </ItemGroup>
+  
+    <Target Name="CleanGenerated">
+        <Delete Files="@(Generated)" />
+    </Target>
+  
+</Project>
